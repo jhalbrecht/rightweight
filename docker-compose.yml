@@ -1,0 +1,50 @@
+version: "3"
+services:
+  apachephp:
+    restart: always
+    build: ./
+    depends_on:
+      - mariadb
+    container_name: rightweight
+    ports:
+      - '8080:80'
+    links:
+      - mariadb
+    networks:
+      - rw-docker
+
+  mariadb:
+    hostname: rwdb
+    image: mariadb
+    restart: always    
+    container_name: rwdb
+    environment:
+      TZ: "America/Phoenix"
+      MYSQL_DATABASE: rightWeight
+      MYSQL_USER: rwUser
+      MYSQL_PASSWORD: rwUser123
+      MYSQL_ALLOW_EMPTY_PASSWORD: 1
+      # MYSQL_ROOT_PASSWORD: secret
+    volumes:
+      - "./data:/docker-entrypoint-initdb.d"
+    networks:
+      - rw-docker
+
+  phpmyadmin:
+    depends_on:
+      - mariadb
+    image: phpmyadmin/phpmyadmin
+    container_name: pma
+    restart: unless-stopped
+    ports:
+      - 8001:80
+    links:
+      - mariadb
+    environment:
+      - PMA_HOST=mariadb
+      - PMA_PORT=3306
+    networks:
+      - rw-docker
+networks:
+  rw-docker:
+    driver: bridge
