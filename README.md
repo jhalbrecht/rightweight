@@ -1,8 +1,8 @@
-# myrightweight
+# rightweight
 
-####An html, php and mysql app to track my weight. Begun in 2019
+#### An html, php and mysql app to track my weight. Begun in 2019
 
-##Stuff to remember
+## Stuff to remember
 this will run a mysql instance. I'm developing on a server that has mysql installed hence the non standard port for the mysql container
 * `docker run  --name ms -p 3307:3306 -e MYSQL_ROOT_PASSWORD=password mysql` 
 * `docker exec -it ms bash`
