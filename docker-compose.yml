@@ -2,7 +2,8 @@ version: "3"
 services:
   apachephp:
     restart: always
-    build: ./
+    # build: ./
+    image: rwweb
     depends_on:
       - mariadb
     container_name: rightweight

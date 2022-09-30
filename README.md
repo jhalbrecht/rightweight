@@ -18,3 +18,4 @@ docker run --detach --name=test-mysql --env="MYSQL_TCP_PORT=52000" mysql
 ##History
 * 9/26/2022 Began conversion to a docker container
 * 9/28/2022 It works!
+* 9/29/2022 Add to github.com as rightweight for sharing - mostly learning github docker registrey.
