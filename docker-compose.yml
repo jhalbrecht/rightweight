@@ -3,10 +3,12 @@ services:
   apachephp:
     restart: always
     # build: ./
-    image: rwweb
+    # image: rwweb
+    image: jhalbrecht/rwweb:0.7 # pull it from docker hub. :-)
     depends_on:
       - mariadb
     container_name: rightweight
+    # container_name: jhalbrecht/rwweb:0.7
     ports:
       - '8080:80'
     links:
@@ -17,7 +19,7 @@ services:
   mariadb:
     hostname: rwdb
     image: mariadb
-    restart: always    
+    restart: always
     container_name: rwdb
     environment:
       TZ: "America/Phoenix"
