@@ -23,4 +23,5 @@ docker run --detach --name=test-mysql --env="MYSQL_TCP_PORT=52000" mysql
 * 9/26/2022 Began conversion to a docker container
 * 9/28/2022 It works!
 * 9/29/2022 Add to github.com as rightweight for sharing - mostly learning github docker registrey.
-* 9/30/2022 Pushed to docker hub
+* 9/30/2022 Pushed to docker hub https://hub.docker.com/r/jhalbrecht/rwweb
+* 10/1/2022 Implemented .env file.
