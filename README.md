@@ -4,6 +4,8 @@
 
 ## build status badge indicator testing
 
+[![Build Status](https://jenkins.rodaw.net/buildStatus/icon?job=yatry)](https://jenkins.rodaw.net/user/jeffa/my-views/view/all/job/yatry/)
+
 https://github.com/<OWNER>/<REPOSITORY>/actions/workflows/<WORKFLOW_FILE>/badge.svg
 
 ## Stuff to remember
