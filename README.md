@@ -2,6 +2,10 @@
 
 #### An html, php and mysql app to track my weight. Begun in 2019
 
+## build status badge indicator testing
+
+https://github.com/<OWNER>/<REPOSITORY>/actions/workflows/<WORKFLOW_FILE>/badge.svg
+
 ## Stuff to remember
 this will run a mysql instance. 
 
